@@ -169,9 +169,7 @@ Given the factory below, the return type is "Location", therefore, the GraphQL i
 <!--DOCUSAURUS_CODE_TABS-->
 <!--PHP 8+-->
 ```
-/**
- * @Factory()
- */
+#[Factory]
 public function createLocation(float $latitude, float $longitude): Location
 {
     return new Location($latitude, $longitude);
@@ -179,7 +177,9 @@ public function createLocation(float $latitude, float $longitude): Location
 ```
 <!--PHP 7+-->
 ```
-#[Factory]
+/**
+ * @Factory()
+ */
 public function createLocation(float $latitude, float $longitude): Location
 {
     return new Location($latitude, $longitude);
